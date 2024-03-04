@@ -62,6 +62,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                             strokeWidth="1.5"
                                             className="w-7 h-7 stroke-red-500"
                                         >
+                                    
                                             <path
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
