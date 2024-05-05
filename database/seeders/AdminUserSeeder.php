@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-class AdminSeeder extends Seeder
+class AdminUserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -18,13 +18,21 @@ class AdminSeeder extends Seeder
         $admin = [
                 [
                     'username' => 'admin',
-                    'email' => 'admin@example.com',
+                    'email' => 'admin@email.com',
                     'password' => bcrypt('123'),
                     'is_admin' => true,
                 ]
             ];
+        $user = [
+                [
+                    'username' => 'user',
+                    'email' => 'user@email.com',
+                    'password' => bcrypt('abc'),
+                    'is_admin' => false,
+                ]
+            ];
             
-        User::insert($admin);
+        User::insert($admin, $user);
 
     }
 }
